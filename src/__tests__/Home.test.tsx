@@ -4,7 +4,7 @@ import Home from '../app/page';
 describe('Home Page', () => {
   it('renders heading', () => {
     render(<Home />);
-    expect(screen.getByText('Hello CI/CD 🚀')).toBeInTheDocument();
+    expect(screen.getByText('Hello')).toBeInTheDocument();
   });
 
   it('renders button', () => {
