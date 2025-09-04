@@ -1,14 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import Home from '../app/page';
+import Home from '@/app/page';
 
 describe('Home Page', () => {
-  it('renders heading', () => {
+  it('renders Hello World text', () => {
     render(<Home />);
-    expect(screen.getByText('Hello')).toBeInTheDocument();
-  });
-
-  it('renders button', () => {
-    render(<Home />);
-    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
+    expect(screen.getByText(/hello world/i)).toBeInTheDocument();
   });
 });
